@@ -1,0 +1,29 @@
+# ─── Rust ───
+server/target/
+**/*.rs.bk
+
+# ─── Node.js (legacy UI) ───
+ui/node_modules/
+ui/package-lock.json
+
+# ─── Binaries ───
+bin/*.exe
+
+# ─── Uploads / Temp ───
+server/uploads/
+ui/uploads/
+ui/ui/
+
+# ─── Artifacts (generated LNK files) ───
+artifacts/*.lnk
+
+# ─── OS ───
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# ─── IDE ───
+.vscode/
+.idea/
+*.code-workspace

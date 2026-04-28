@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LNK Tool v4.0 — Professional Red Team LNK generation and forensic analysis suite.">
+  <title>LNK TOOL v4.0 | Red Team Suite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="shell" id="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo-block">
+        <div class="logo-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+        </div>
+        <div class="logo-text">
+          LNK TOOL
+          <span>Red Team Suite v4.0</span>
+        </div>
+      </div>
+
+      <p class="nav-label">Operations</p>
+      <nav class="nav-wrap" id="nav">
+        <button class="nav-btn active" data-tab="generator" id="nav-generator">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Generator
+        </button>
+        <button class="nav-btn" data-tab="verify" id="nav-verify">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Verify LNK
+        </button>
+        <button class="nav-btn" data-tab="settings" id="nav-settings">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          Settings
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="status-row">
+          <div class="status-dot"></div>
+          <span>Backend Online</span>
+        </div>
+        <small>&copy; 2026 Red Team Suite &mdash; Rust</small>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- ═══ GENERATOR TAB ═══ -->
+      <div class="tab-content active" id="tab-generator">
+        <header class="hero">
+          <h1>Create <span class="hl glitch-text">Poisoned</span> Shortcuts</h1>
+          <p>Select a technique and configure parameters to generate professional-grade LNK payloads with full OPSEC compliance.</p>
+        </header>
+
+        <div class="content-grid">
+          <div class="left-col">
+            <!-- Technique selector -->
+            <div class="card" style="animation:fadeUp .6s ease forwards;animation-delay:.1s;opacity:0">
+              <h3 class="section-title">
+                <span class="icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                </span>
+                Choose Technique
+              </h3>
+              <div class="tech-grid" id="tech-grid"></div>
+            </div>
+
+            <!-- Configuration -->
+            <div class="card" style="animation:fadeUp .6s ease forwards;animation-delay:.2s;opacity:0">
+              <h3 class="section-title">
+                <span class="icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                </span>
+                Configuration
+              </h3>
+              <div class="form-grid">
+                <div class="input-group">
+                  <label for="inp-target">Target Executable</label>
+                  <input id="inp-target" name="target" class="input" placeholder="C:\Windows\System32\calc.exe" value="C:\Windows\System32\calc.exe">
+                </div>
+                <div class="input-group">
+                  <label for="inp-fake">Fake Display Path</label>
+                  <input id="inp-fake" name="fake" class="input" placeholder="C:\Users\Public\Documents\contract.pdf" value="C:\Users\Public\Documents\contract.pdf">
+                </div>
+                <div class="input-group span-2">
+                  <label for="inp-args">Execution Arguments</label>
+                  <input id="inp-args" name="args" class="input" placeholder="-window hidden -enc BASE64...">
+                </div>
+                <div class="input-group span-2" id="url-group" style="display:none">
+                  <label for="inp-url">Payload Download URL</label>
+                  <input id="inp-url" name="url" class="input" placeholder="http://attacker.com/payload.exe">
+                </div>
+                <div class="input-group">
+                  <label for="inp-delay">Anti-Sandbox Delay (sec)</label>
+                  <div class="input-wrap">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <input id="inp-delay" type="number" name="delay" class="input has-icon" value="0">
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="inp-out">Output Filename</label>
+                  <input id="inp-out" name="out" class="input" placeholder="shortcut.lnk" value="shortcut.lnk">
+                </div>
+              </div>
+              <div class="actions-row">
+                <button id="btn-generate" class="btn btn-primary">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  Generate LNK
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right column -->
+          <div class="right-col">
+            <div class="console-card">
+              <div class="console-header">
+                <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                Output Console
+              </div>
+              <div class="console-body" id="console-output">
+                <div class="console-idle">Awaiting generation command...</div>
+              </div>
+            </div>
+
+            <div class="tip-card">
+              <h4>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                OPSEC Advisory
+              </h4>
+              <p>
+                Combine icon spoofing with the "Spoof Properties" technique for maximum social engineering effectiveness.
+                Always enable a short anti-sandbox delay (120–180s) to bypass automated detonation chambers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ VERIFY TAB ═══ -->
+      <div class="tab-content" id="tab-verify">
+        <header class="hero">
+          <h1>Verify <span class="hl">LNK</span> Files</h1>
+          <p>Upload a Windows shortcut file to analyze for spoofing discrepancies between displayed and executed targets.</p>
+        </header>
+
+        <div class="content-grid">
+          <div class="left-col">
+            <div class="verify-zone" id="verify-dropzone">
+              <input type="file" id="verify-file-input" style="display:none" accept=".lnk">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              <h3 id="verify-zone-title">Drop LNK File Here</h3>
+              <p>Or click to browse. Supports COM and binary analysis methods.</p>
+            </div>
+          </div>
+
+          <div class="right-col">
+            <div class="console-card">
+              <div class="console-header">
+                <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                Analysis Report
+              </div>
+              <div class="console-body" id="verify-output">
+                <div class="console-idle">Upload a file to begin forensic analysis...</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SETTINGS TAB ═══ -->
+      <div class="tab-content" id="tab-settings">
+        <header class="hero">
+          <h1>Global <span class="hl">Settings</span></h1>
+          <p>Configure OPSEC defaults and generation behaviour for all techniques.</p>
+        </header>
+        <div class="settings-grid" id="settings-grid"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
